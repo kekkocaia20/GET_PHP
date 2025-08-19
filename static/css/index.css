@@ -1,0 +1,234 @@
+/* Sfondo pagina */
+body {
+  background-color: #93BCFF; /* colore di sfondo chiaro */
+  font-family: 'Fira Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  /* REGOLE PER IL LAYOUT STICKY FOOTER */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Stile generale navbar */
+.navbar {
+    background-color: #93BCFF; /* colore di sfondo chiaro */
+    border-bottom: 2px solid #344046; /* linea sottile sotto */
+    padding: 0.5rem 1rem; 
+    z-index: 1030; /* sopra al contenuto */
+  }
+  
+  /* Logo */
+  .navbar-logo {
+    height: 45px;   /* altezza fissa */
+    margin-right: 10px; /* spazio tra logo e testo */
+  }
+  
+  /* Testo brand */
+  .navbar-brand {
+    font-size: 1.4rem; 
+    font-weight: 600; 
+    color: #344046; /* colore che richiama il logo PHP */ 
+    text-decoration: none; /
+  }
+
+  .navbar-brand:hover {
+    color: #4F5B93; 
+  }
+  
+  /* Container centrato */
+  .container-md {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Contenuto principale */
+.container {
+    max-width: 800px;       /* restringe la larghezza per leggibilità */
+    /* REGOLA PER IL LAYOUT STICKY FOOTER */
+    flex-grow: 1; /* Permette al container di crescere e spingere il footer in basso */
+  }
+  
+  /* Titolo */
+  .container h1 {
+    color: #4F5B93;         /* colore ispirato al logo PHP */
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+  }
+  
+  /* Paragrafo introduttivo */
+  .container p.lead {
+    color: #344046;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+/* Lista esercizi */
+.list-group {
+  border: none; /* rimuove bordi di bootstrap */
+}
+
+/* Link esercizi */
+.list-group-item {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  padding: 15px 20px;
+  border: 1px solid #344046;    /* bordo sottile attorno a ogni esercizio */
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background: #4F5B93;
+  transition: all 0.3s ease;
+}
+
+/* Hover sugli esercizi */
+.list-group-item:hover {
+  background-color: #4F5B93;
+  color: #fff;
+  transform: translateX(5px); /* piccolo movimento */
+}
+
+/* Footer generale */
+.footer {
+  color: #344046; /* colore testo footer */
+  padding: 0.5rem 1rem;
+  border-top: 2px solid #344046; /* linea sottile sopra */
+}
+
+/* Contenitore testo */
+.footer .caia-text {
+  font-size: 16px;
+  margin: 0;
+  color: #344046;
+}
+
+/* Social icons container */
+.footer .social-icons a {
+  color: #344046;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Hover effetti icone */
+.footer .social-icons a:hover {
+  transform: translateY(-3px); /* Piccolo movimento verso l'alto */
+}
+
+/* Icone */
+.footer .social-icons i {
+  font-size: 10px;
+  color: #344046;
+}
+
+/* --- Media Queries --- */
+
+/* Stile per schermi più piccoli (es. cellulari) */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar-logo {
+    height: 40px;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  /* Contenuto principale */
+  .container {
+    padding: 0 1rem; /* Aggiunge padding laterale per respirare */
+      /* REGOLE DI CENTRAGGIO */
+      margin: 0 auto;
+  }
+
+  .container h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .container p.lead {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  /* Footer */
+  .footer {
+    padding-top: 1rem;
+  }
+
+/* Regola il contenitore delle icone social */
+.footer .social-icons {
+    display: flex;
+    align-items: center; /* Centra orizzontalmente gli elementi */
+    text-align: center; /* Assicura che il testo sia centrato all'interno di ogni link */
+    width: 100%; /* Assicura che il contenitore occupi tutta la larghezza per il centraggio */
+  }
+
+.footer .social-icons a {
+    margin-bottom: 10px; /* Aggiunge spazio tra le icone */
+    color: #344046;
+    text-decoration: none;
+  }
+
+.footer .social-icons i {
+    font-size: 18px; /* Aumenta leggermente la dimensione dell'icona per una migliore visibilità */
+    margin-right: 5px; /* Aggiunge spazio tra l'icona e il testo */
+    vertical-align: middle; /* Allinea l'icona con il testo */
+  }
+}
+
+
+/* Stile per schermi medi (es. tablet) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .container {
+      /* Centra il contenitore e aggiunge padding */
+      max-width: 600px; /* Imposta una larghezza ottimale per i tablet */
+      margin: 0 auto; /* Centra il contenitore */
+      padding: 0 2rem;
+  }
+
+  /* Centra il testo e le liste */
+  .container h1,
+  .container p.lead,
+  .list-group {
+      text-align: center;
+  }
+
+  /* Centra gli elementi del footer */
+  .footer {
+      padding-top: 1rem;
+      text-align: center;
+  }
+  
+  .footer .social-icons {
+      display: flex;
+      justify-content: center; /* Centra gli elementi Flexbox */
+      align-items: center; /* Allinea verticalmente gli elementi */
+      width: 100%;
+      margin-top: 10px;
+  }
+
+  .footer .social-icons a {
+      margin: 0 10px; /* Aggiunge spazio tra le icone */
+      display: flex; /* Permette l'allineamento icona-testo */
+      align-items: center;
+  }
+
+  .footer .social-icons i {
+      margin-right: 5px; /* Spazio tra icona e testo */
+  }
+}
+
+/* Stile per schermi grandi (es. desktop) */
+@media (min-width: 993px) {
+  .container {
+    max-width: 960px; /* Aumenta leggermente la larghezza per schermi più grandi */
+    margin: 0 auto; /* Centra il contenitore */
+    padding: 0 2rem;
+  }
+}
+
+
+
+
+  
+  

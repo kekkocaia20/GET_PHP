@@ -1,0 +1,39 @@
+- Calcolo del prezzo con sconto
+Ricevi un prezzo e una percentuale di sconto via GET, calcola e mostra il prezzo scontato.
+Esempio:
+http://localhost/sconto.php?prezzo=100&sconto=20
+
+- Verifica se un numero è pari o dispari
+Prendi un numero via GET e indica se è pari o dispari.
+Esempio:
+http://localhost/pariodispari.php?numero=7
+
+- Generatore di saluto personalizzato
+Ricevi nome e ora del giorno (23:00) via GET e mostra un saluto.
+Esempio:
+http://localhost/saluto.php?nome=Francesco
+
+- Conversione da euro a dollari
+Passa una cifra in euro via GET e converti in dollari (1€ = 1.10$ circa).
+Esempio:
+http://localhost/conversione.php?euro=50
+
+- Codice fiscale semplificato
+Ricevi nome, cognome e anno di nascita e genera una stringa tipo codice fiscale.
+Esempio:
+http://localhost/cf.php?nome=Francesco&cognome=Caianiello&anno=1995
+
+- Calcolo dell'area di un rettangolo
+Ricevi la base e l'altezza via GET e calcola l’area.
+Esempio:
+http://localhost/GET_PHP/AreaRettangolo.php?base=10&altezza=20
+
+- Conversione da Celsius a Fahrenheit
+Ricevi la temperatura in gradi Celsius e restituisci quella in Fahrenheit.
+Esempio:
+http://localhost/GET_PHP/ConversioneCaF.php?celsius=10
+
+- Calcolo del perimetro di un cerchio
+Ricevi il raggio e calcola il perimetro (2 * π * r).
+Esempio:
+http://localhost/GET_PHP/PerimetroCerchio.php?raggio=10

@@ -1,0 +1,203 @@
+/* Sfondo pagina */
+body {
+    background-color: #93BCFF; /* colore di sfondo chiaro */
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* REGOLE PER IL LAYOUT STICKY FOOTER */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Stile generale navbar */
+  .navbar {
+      background-color: #93BCFF; /* colore di sfondo chiaro */
+      border-bottom: 2px solid #344046; /* linea sottile sotto */
+      padding: 0.5rem 1rem; 
+      z-index: 1030; /* sopra al contenuto */
+    }
+    
+    /* Logo */
+    .navbar-logo {
+      height: 45px;   /* altezza fissa */
+      margin-right: 10px; /* spazio tra logo e testo */
+    }
+    
+    /* Testo brand */
+    .navbar-brand {
+      font-size: 1.4rem; 
+      font-weight: 600; 
+      color: #344046; /* colore che richiama il logo PHP */ 
+      text-decoration: none; /
+    }
+  
+    .navbar-brand:hover {
+      color: #4F5B93; 
+    }
+
+    /* Titolo esercizio sopra i pulsanti */
+.exercise-title {
+    font-size: 1.8rem;
+    font-weight: 700; /* grassetto */
+    color: #344046;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+/* Contenitore principale centrato */
+.main-content {
+    min-height: calc(100vh - 70px); /* altezza stimata navbar */
+    display: flex;
+    flex-direction: column;       /* elementi verticali: pulsanti + form */
+    justify-content: center;      /* centratura verticale */
+    align-items: center;          /* centratura orizzontale */
+    padding: 20px;
+}
+
+/* Contenitore dei pulsanti sopra il form */
+.main-content .btn-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px; /* spazio tra pulsanti e form */
+}
+
+/* Stile base dei pulsanti */
+.main-content .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-decoration: none; /* rimuove underline per link */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Bottone Home */
+.main-content .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+}
+
+.main-content .btn-secondary:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+
+/* Bottone Esercizio Successivo */
+.main-content .btn-success {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+}
+
+.main-content .btn-success:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+
+/* Box del form */
+.form-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: min(320px, 90vw);
+}
+
+/* Input */
+.form-box input[type="number"], .form-box input[type="text"], .form-box input[type="date"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-box input[type="number"]:focus, .form-box input[type="text"]:focus, .form-box input[type="date"]:focus {
+    border-color: #6c5ce7;
+    box-shadow: 0 0 8px rgba(108,92,231,0.4);
+}
+
+/* Bottone del form */
+.form-box button {
+    padding: 12px;
+    background: #6c5ce7;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form-box button:hover {
+    background: #4834d4;
+}
+
+/* 🔽 Rimuove le freccette da Chrome, Safari, Edge */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* ---------------------- Responsive ---------------------- */
+
+/* Smartphone piccoli (<576px) */
+@media (max-width: 575.98px) {
+    .form-box {
+        padding: 20px;
+    }
+
+    .form-box input[type="number"],
+    .form-box button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .main-content .btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .main-content .btn-container {
+        gap: 10px;
+    }
+}
+
+/* Tablet e smartphone medi (<768px) */
+@media (max-width: 767.98px) {
+    .form-box {
+        width: 90vw;
+    }
+
+    .main-content .btn {
+        font-size: 0.95rem;
+        padding: 9px 18px;
+    }
+}
+
+/* Tablet grandi e piccoli desktop (<992px) */
+@media (max-width: 991.98px) {
+    .form-box {
+        width: 70vw;
+    }
+}
+
+/* Desktop grande (>1200px) */
+@media (min-width: 1200px) {
+    .form-box {
+        width: 400px;
+    }
+}
